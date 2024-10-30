@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_1"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_estado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado del Sistema"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_estado"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:text="No se han detectado nuevas fugas"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_history_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_status"
+        android:layout_marginTop="34dp"
+        android:text="Historial de Alertas"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true" />
+
+
+    <ListView
+        android:id="@+id/lv_alert_history"
+        android:layout_width="match_parent"
+        android:layout_height="323dp"
+        android:layout_below="@id/tv_history_title"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btn_sensores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver sensores"
+        android:layout_below="@id/lv_alert_history"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/black"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_opciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ir a la configuracion"
+        android:backgroundTint="@color/black"
+        android:layout_below="@id/btn_sensores"
+        android:layout_marginBottom="16dp"/>
+
+</RelativeLayout>

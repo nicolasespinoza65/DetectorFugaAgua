@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/img_1"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_sensor_list_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lista de Sensores"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColorHint="@color/black"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:padding="8dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/tv_sensor_location_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ubicación: Cocina"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_sensor_status_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activo"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:padding="8dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/tv_sensor_location_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ubicación: Baño"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_sensor_status_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inactivo"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_volver_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volver al Menú Principal"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/black"/>
+
+
+    <Button
+        android:id="@+id/btn_ir_configuracion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ir a Configuración"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"/>
+</LinearLayout>
