@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "226008380014",
+    "project_id": "detector-fugas-agua",
+    "storage_bucket": "detector-fugas-agua.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226008380014:android:d1573334ee8e1e1d186c7f",
+        "android_client_info": {
+          "package_name": "com.example.detectorfugaagua"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo0EDwCZrlsoUC-MexkRHlYMPiI5pD-lM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

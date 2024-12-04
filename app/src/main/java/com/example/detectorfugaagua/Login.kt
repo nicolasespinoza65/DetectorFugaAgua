@@ -10,8 +10,18 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.textfield.TextInputEditText
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
+
+
 
 class Login : AppCompatActivity() {
+
+
+    private lateinit var auth: FirebaseAuth
+
+
 
     private lateinit var emailEditText: TextInputEditText
     private lateinit var passwordEditText: TextInputEditText
@@ -25,6 +35,9 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.login)
+
+
+        auth = Firebase.auth
 
 
         emailEditText = findViewById(R.id.emailEditText)
@@ -49,6 +62,20 @@ class Login : AppCompatActivity() {
         }
     }
 
+    private fun singIn(email: String, password: String) {
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener {
+                if(it.isSuccessful){
+                    Toast.makeText(this, "inicio de sesion correcto", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, MenuPrincipal::class.java)
+                    startActivity(intent)
+                    finish()
+                }else{
+                    Toast.makeText(this, "Error al iniciar sesion", Toast.LENGTH_SHORT).show()
+                }
+            }
+    }
+
     private fun performLogin() {
         val email = emailEditText.text.toString()
         val password = passwordEditText.text.toString()
@@ -57,8 +84,10 @@ class Login : AppCompatActivity() {
             Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show()
             return
         }
+        singIn(email, password)
 
-        if (email == predefinedEmail && password == predefinedPassword) {
+
+        /*if (email == predefinedEmail && password == predefinedPassword) {
             Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
 
             val intent = Intent(this, MenuPrincipal::class.java)
@@ -66,7 +95,7 @@ class Login : AppCompatActivity() {
             finish()
         } else {
             Toast.makeText(this, "Email o contraseña incorrectos", Toast.LENGTH_SHORT).show()
-        }
+        }*/
     }
 }
 
